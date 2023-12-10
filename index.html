@@ -23,17 +23,26 @@
         </section>
         <section class="container formulario">
     
-                <form action="">
+                <form id="form">
 
-                    <input class="item" type="text" placeholder="Nome completo *">
+                    <div>
+                        <input class="item" type="text" placeholder="Nome completo *" class="inputs required">
+                        <span class="span-required"></span>        
+                    </div>
                     
+                    <div>
+                        <input class="item" type="email"  placeholder="Email *" class="inputs required" >
+                        <span class="span-required"></span>
+                    </div>              
+                    
+                    <div>
+                        <input class="item" type="tel"  placeholder="Telefone *" class="inputs required" >
+                        <span class="span-required"></span>
+                    </div>
 
-                    <input class="item" type="email" id="" placeholder="Email *" >
-                    
-                    
-                    <input class="item" type="tel" id="" placeholder="Telefone *" >
-
-                    <textarea class="item" placeholder="Mensagem *" id="mensagem"></textarea>
+                    <div>
+                        <textarea class="inputs" placeholder="Mensagem *" cols="38" rows="10"></textarea>
+                    </div>
                     
                     <p>*campos obrigatórios</p>
 

@@ -1,11 +1,5 @@
-const verificacao = () => {
-    const inputVerificado = document.querySelector(".item")
-if (inputVerificado.value === 0){
-  inputVerificado.classList.add('campo-obrigatotio')
+const form = document.getElementById("form");
+const campos = document.querySelectorAll('.required');
+const spans = document.querySelectorAll('.span-required');
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-}else {
-    inputVerificado.classList.add('campo-preechido')
-}
-}
-
-verificacao()
