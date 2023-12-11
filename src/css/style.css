@@ -1,3 +1,12 @@
+:root{
+    --color-purple1: #9333FF;
+    --color-purple2: indigo;
+    --color-white: white;
+    --color-button: rgba(60, 204, 135, 1);
+    --color-button2: rgb(49, 163, 108);
+    --color-span: red;
+}
+
 main {
     display: flex;
     align-items: center;
@@ -10,83 +19,79 @@ main {
 
 }
 
-.container{
+.container, #form {
     margin: 20px;
 }
 
-.container.textos {
-    color: white;
-    width: 300px;
-    height: 111px;
-    top: -116px;
-    left: -361px;
+.container {
+    color: var(--color-white);
+    max-width: 300px;
+    max-height: 111px;
 }
 
-.container.textos h2 {
+.container h2 {
     font-size: 20px;
     font-weight: 900;
     line-height: 23px;
-    letter-spacing: 0em;
     text-align: left;
     margin-bottom: 15px;
 }
 
-.container.textos p {
+.container p {
     font-size: 15px;
     font-weight: 300;
 }
 
-.container.formulario {
+#form {
     padding: 20px;
-    width: 340px;
+    max-width: 340px;
     min-height: 378px;
-    top: -250px;
-    left: -1px;
-    background-color: white;
+    background-color: var(--color-white);
 }
 
-.container.formulario .item{
-    margin-bottom: 15px;
-    width: 298.01px;
-    height: 35.11px;
-    padding-left: 11px;
+#form .inputs{
+    width: 100%;
+    min-height: 35.11px;
+    padding: 11px;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 15px;
-    line-height: 17.58px;
-    border: 1px solid black;
+    font-size: 15px;   
+    outline: none;
+    border: 2px solid rgb(47, 47, 47);
+    transition: 0.3s ;
 }
 
-.container .nao-validado {
-    display: inline-block;
-    font-size: 14px;
-    color: red;
-    
+#form div {
+    margin-bottom: 10px;
 }
 
-.container.formulario #mensagem{
-    height: 100px;
-    padding-top: 5px;
-    margin-bottom: 5px; 
+#form .inputs:focus{
+    border-color: var(--color-purple1);
 }
 
-.container.formulario .botao{
-    background: rgba(60, 204, 135, 1);
-    color: white;
-    width: 298.01px;
+#form .botao{
+    background: var(--color-button);
+    color: var(--color-white);
+    width: 100%;
     height: 41.1px;
     border: none;
+    cursor: pointer;
     border-radius: 5px;
     font-weight: 700;
     font-size: 15px;
     margin-top: 20px;
+    transition: 0.3s;
 }
 
-
-.campo-preenchido{
-    border: 1px solid green;
+#form .botao:hover{
+    background-color: var(--color-button2);
 }
-.campo-obrigatorio{
-    border: 1px solid red;
-    content: "campo obrigatorio";
+
+.span-required{
+    display: none;
+    font-size: 14px;
+    color: var(--color-span);
+    font-weight: 700;
+    padding-top: 3px;
+   
 }

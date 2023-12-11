@@ -1,0 +1,9 @@
+@media ( max-width: 425px ) {
+    main{
+       flex-direction: column;
+    }
+
+    .container h2,p{
+        text-align: center;
+    }
+}

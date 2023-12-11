@@ -12,37 +12,38 @@
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/response.css">
 </head>
 <body>
     <main>
-        <section class="container textos">
+        <section class="container">
             <h2>FICOU COM DÚVIDA? <br>
                 NOS MANDE UMA MENSAGEM!</h2>
                 <p>
                     caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.
                 </p>
         </section>
-        <section class="container formulario">
-    
+        <section >
+
                 <form id="form">
 
                     <div>
-                        <input class="item" type="text" placeholder="Nome completo *" class="inputs required">
-                        <span class="span-required"></span>        
+                        <input  type="text" placeholder="Nome completo *" class="inputs required" oninput= "nameValidate()" >
+                        <span class="span-required">Digite um nome válido!</span>        
                     </div>
                     
                     <div>
-                        <input class="item" type="email"  placeholder="Email *" class="inputs required" >
-                        <span class="span-required"></span>
+                        <input type="email"  placeholder="Email *" class="inputs required" oninput="emailValidate()">
+                        <span class="span-required">Digite um email válido!</span>
                     </div>              
                     
                     <div>
-                        <input class="item" type="tel"  placeholder="Telefone *" class="inputs required" >
-                        <span class="span-required"></span>
+                        <input  type="tel"  placeholder="Telefone *" class="inputs required" oninput="numberValidate()">
+                        <span class="span-required">Digite um número válido!</span>
                     </div>
 
                     <div>
-                        <textarea class="inputs" placeholder="Mensagem *" cols="38" rows="10"></textarea>
+                        <textarea class="inputs required" placeholder="Mensagem *" cols="38" rows="7" oninput="messageValidate()"></textarea><span class="span-required">Digite uma mensagen com no mínimo 50 caracteres!</span>
                     </div>
                     
                     <p>*campos obrigatórios</p>
